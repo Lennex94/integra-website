@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INTEGRA – Brand- & Wasserschadensanierung</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('dein-bild.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .notruf-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #a1313e;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .menu {
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .menu a {
+      position: relative;
+      color: #a1313e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
+    }
+
+    .menu a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: #a1313e;
+      transition: width 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #fff;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    .main-wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-img {
+      width: 250px;
+      max-width: 80%;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .leistungen p {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .leistungen p:nth-child(1) { animation-delay: 1.2s; }
+    .leistungen p:nth-child(2) { animation-delay: 1.6s; }
+    .leistungen p:nth-child(3) { animation-delay: 2.0s; }
+    .leistungen p:nth-child(4) { animation-delay: 2.4s; }
+    .leistungen p:nth-child(5) { animation-delay: 2.8s; }
+
+    .leistungen {
+      font-size: 18px;
+      max-width: 600px;
+      color: #a1313e;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notruf-banner">
+    NOTDIENST: 0177-7279327
+  </div>
+
+<nav class="menu">
+  <a href="Über%20Uns/ueber-uns.html">ÜBER UNS</a>
+  <a href="Vorteile/vorteile.html">VORTEILE</a>
+  <a href="Leistungen/leistungen.html">LEISTUNGEN</a>
+  <a href="Referenz/referenz.html">REFERENZ</a>
+  <a href="Kontakt/kontakt.html">KONTAKT</a>
+  <a href="Impressum/impressum.html">IMPRESSUM</a>
+</nav>
+
+  <div class="main-wrapper">
+    <img src="integra-logo.png" alt="INTEGRA Logo" class="logo-img">
+
+    <div class="leistungen">
+      <p>✔ Brand- & Rauchschadensanierung</p>
+      <p>✔ Wasserschadenbeseitigung</p>
+      <p>✔ Trocknung & Feuchtigkeitsmessung</p>
+      <p>✔ Geruchsneutralisation</p>
+      <p>✔ Wiederherstellung & Renovierung</p>
+    </div>
+  </div>
+
+</body>
+</html>
