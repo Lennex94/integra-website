@@ -103,6 +103,40 @@
     .impressum-box strong {
       color: #a1313e;
     }
+
+      @media screen and (max-width: 768px) {
+    .menu {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 15px;
+      padding: 15px 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      max-width: 95%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .menu a {
+      font-size: 13px;
+      padding: 6px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  
+    .content-wrapper {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    p, ul li {
+      font-size: 13px;
+    }
+  }
   </style>
 </head>
 <body>
@@ -146,4 +180,5 @@
       <p><strong>Datenschutz</strong><br>
 
       Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher oder geschäftlicher Daten (E-Mail-Adressen, Namen, Anschriften etc.) besteht, erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis. Die Inanspruchnahme aller angebotenen Dienste ist – soweit technisch möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe
+
 
