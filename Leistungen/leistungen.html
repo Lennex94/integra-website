@@ -138,6 +138,41 @@
     .integra {
       color: #a1313e;
     }
+
+      @media screen and (max-width: 768px) {
+    .menu {
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px 15px;
+      z-index: 999;
+    }
+  
+    .menu a {
+      font-size: 12px;
+      padding: 6px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  
+    .content-wrapper {
+      margin-top: 140px; /* Platz für Banner + Menü */
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    p, ul li {
+      font-size: 13px;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -205,5 +240,6 @@
 
 </body>
 </html>
+
 
 
