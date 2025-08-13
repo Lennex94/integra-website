@@ -111,43 +111,39 @@
     }
 
     /* ✅ Mobile Optimierung */
-    @media screen and (max-width: 768px) {
-      .menu {
-        position: static;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 20px;
-        padding: 10px 15px;
-        max-width: 95%;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .menu a {
-        font-size: 14px;
-        padding: 8px 12px;
-        flex: 0 1 auto;
-        text-align: center;
-      }
-
-      .content-wrapper {
-        margin-top: 20px;
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-
-      p {
-        font-size: 13px;
-      }
+  @media screen and (max-width: 768px) {
+    .menu {
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px 15px;
+      z-index: 999;
     }
+  
+    .menu a {
+      font-size: 12px;
+      padding: 6px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  
+    .content-wrapper {
+      margin-top: 140px; /* Platz für Banner + Menü */
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    p, ul li {
+      font-size: 13px;
+    }
+  }
   </style>
 </head>
 <body>
@@ -189,5 +185,6 @@
 
 </body>
 </html>
+
 
 
