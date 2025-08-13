@@ -144,28 +144,28 @@
     ul li:nth-child(14) { animation-delay: 3.4s; }
 
     /* ✅ Mobile Optimierung */
-    @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .menu {
       position: static;
-      top: 50px;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.2);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 10px 15px;
-      z-index: 999;
+      gap: 10px 15px;
+      padding: 15px 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      max-width: 95%;
+      margin: 0 auto;
+      text-align: center;
     }
   
     .menu a {
-      font-size: 12px;
+      font-size: 13px;
       padding: 6px 8px;
       text-align: center;
       white-space: nowrap;
     }
   
     .content-wrapper {
-      margin-top: 140px; /* Platz für Banner + Menü */
+      margin-top: 20px;
       padding: 20px;
     }
   
@@ -177,7 +177,6 @@
       font-size: 13px;
     }
   }
-
   </style>
 </head>
 <body>
@@ -219,6 +218,7 @@
 
 </body>
 </html>
+
 
 
 
