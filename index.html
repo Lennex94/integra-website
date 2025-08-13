@@ -106,27 +106,33 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+    
     @media screen and (max-width: 768px) {
       .menu {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 10px 15px;
       }
-
+    
       .menu a {
         font-size: 14px;
         padding: 8px 12px;
+        flex: 1 1 auto;
+        text-align: center;
       }
-
+    
       .leistungen {
         font-size: 16px;
         padding: 0 10px;
       }
-
+    
       .main-wrapper {
         padding-top: 140px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -158,3 +164,4 @@
 
 </body>
 </html>
+
