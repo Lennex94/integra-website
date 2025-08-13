@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns – INTEGRA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('dein-bild.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .notruf-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #a1313e;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .menu {
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .integra {
+      color: #a1313e;
+    }
+
+    .menu a {
+      position: relative;
+      color: #a1313e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
+    }
+
+    .menu a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background-color: #a1313e;
+      transition: width 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #fff;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-wrapper {
+      margin-top: 120px;
+      padding: 30px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(255, 255, 255, 0.50);
+      border-radius: 10px;
+      color: #333;
+      animation: fadeSlide 1s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      color: #a1313e;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #a1313e;
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notruf-banner">
+    NOTDIENST: 0177-7279327
+  </div>
+
+<nav class="menu">
+  <a href="../index.html">STARTSEITE</a>
+  <a href="../Über%20Uns/ueber-uns.html">ÜBER UNS</a>
+  <a href="../Vorteile/vorteile.html">VORTEILE</a>
+  <a href="../Leistungen/leistungen.html">LEISTUNGEN</a>
+  <a href="../Referenz/referenz.html">REFERENZ</a>
+  <a href="../Kontakt/kontakt.html">KONTAKT</a>
+  <a href="../Impressum/impressum.html">IMPRESSUM</a>
+</nav>
+
+
+  <div class="content-wrapper">
+    <h1>Dürfen wir uns vorstellen – INTEGRA</h1>
+    <p><span class="integra">INTEGRA</span> ist Ihr zuverlässiger Komplettanbieter für die Sanierung von Brand- und Wasserschäden – sowohl am Gebäude als auch am Inventar. Unser Fokus liegt auf schneller Ersthilfe und einer leistungsstarken Notdienstorganisation, um Folgeschäden frühzeitig zu vermeiden.</p>
+
+    <p>Wir begleiten Sie kompetent durch alle Phasen der Schadensregulierung: von der Erstversorgung über die fachgerechte Sanierung bis hin zur vollständigen Wiederherstellung nach Brand-, Wasser-, Sturm-, Einbruch- oder Vandalismusschäden.</p>
+
+    <p>Unsere langjährige Erfahrung, fundierte Ausbildungen und kontinuierliche Weiterbildungen machen uns zu einem geschätzten Partner für Versicherungen, Sachverständige und Regulierer. Sie vertrauen seit Jahren auf unsere Expertise und Zuverlässigkeit.</p>
+
+    <p>Mit modernen Technologien, einem hohen Anspruch an Umwelt- und Arbeitsschutz sowie einem positiven Betriebsklima erfüllen wir die hohen Anforderungen unserer Auftraggeber. Unser transparentes Leistungsverzeichnis bietet eine klare Grundlage für die Kostenkalkulation und Nachweisführung – verbindlich und nachvollziehbar.</p>
+
+    <p>Unsere Projektleiter sorgen jederzeit für einen aktuellen Überblick über den Sanierungsstand und stehen Ihnen als persönliche Ansprechpartner zur Seite. Kunden, Versicherer und alle Projektbeteiligten profitieren von unserer strukturierten Arbeitsweise und den damit verbundenen Zeit- und Kostenvorteilen.</p>
+
+    <h2>Unser Team</h2>
+    <p><strong>Ulrich von Moers</strong><br>Staatlich geprüfter Techniker<br>Qualitätsmanagement & QM-Beauftragter</p>
+
+    <p><strong>Aurél Theis</strong><br>Dipl.-Bauingenieur<br>Projektleitung</p>
+
+    <p><strong>Karl-Heinz Purwin</strong><br>Projektleitung</p>
+
+    <p>Mit fundierter Ausbildung, langjähriger Berufserfahrung und einem hohen Maß an Einsatzbereitschaft sichern unsere Projektleiter die Qualität unserer Leistungen – kompetent, freundlich und flexibel.</p>
+  </div>
+
+</body>
+</html>
