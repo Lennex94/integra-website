@@ -58,17 +58,16 @@
       transition: width 0.3s ease;
     }
 
-    .integra {
-      color: #a1313e;
-    }
-
-
     .menu a:hover {
       color: #fff;
     }
 
     .menu a:hover::after {
       width: 100%;
+    }
+
+    .integra {
+      color: #a1313e;
     }
 
     @keyframes fadeSlide {
@@ -80,34 +79,7 @@
         opacity: 1;
         transform: translateY(0);
       }
-
-      @media screen and (max-width: 768px) {
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 20px;
-      padding: 10px 15px;
-      max-width: 95%;
-      margin: 0 auto;
     }
-  
-    .menu a {
-      font-size: 14px;
-      padding: 8px 12px;
-      flex: 1 1 auto;
-      text-align: center;
-    }
-  
-    .leistungen {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  
-    .main-wrapper {
-      padding-top: 140px;
-    }
-  }
 
     .content-wrapper {
       margin-top: 120px;
@@ -169,6 +141,41 @@
     ul li:nth-child(12) { animation-delay: 3.0s; }
     ul li:nth-child(13) { animation-delay: 3.2s; }
     ul li:nth-child(14) { animation-delay: 3.4s; }
+
+    /* ✅ Mobile Optimierung */
+    @media screen and (max-width: 768px) {
+      .menu {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 10px 15px;
+        max-width: 95%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .menu a {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex: 0 1 auto;
+        text-align: center;
+      }
+
+      .content-wrapper {
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -210,7 +217,3 @@
 
 </body>
 </html>
-
-
-
-
