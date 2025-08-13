@@ -36,10 +36,6 @@
       z-index: 999;
     }
 
-    .integra {
-      color: #a1313e;
-    }
-
     .menu a {
       position: relative;
       color: #a1313e;
@@ -68,6 +64,10 @@
       width: 100%;
     }
 
+    .integra {
+      color: #a1313e;
+    }
+
     @keyframes fadeSlide {
       from {
         opacity: 0;
@@ -77,32 +77,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-      
-      @media screen and (max-width: 768px) {
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 20px;
-      padding: 10px 15px;
-      max-width: 95%;
-      margin: 0 auto;
-    }
-  
-    .menu a {
-      font-size: 14px;
-      padding: 8px 12px;
-      flex: 1 1 auto;
-      text-align: center;
-    }
-  
-    .leistungen {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  
-    .main-wrapper {
-      padding-top: 140px;
     }
 
     .content-wrapper {
@@ -135,6 +109,44 @@
       line-height: 1.5;
       margin-bottom: 15px;
     }
+
+    /* ✅ Mobile Optimierung */
+    @media screen and (max-width: 768px) {
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 10px 15px;
+        max-width: 95%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .menu a {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex: 0 1 auto;
+        text-align: center;
+      }
+
+      .content-wrapper {
+        margin-top: 140px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -143,15 +155,14 @@
     NOTDIENST: 0177-7279327
   </div>
 
-<nav class="menu">
-  <a href="../index.html">STARTSEITE</a>
-  <a href="../Über%20Uns/ueber-uns.html">ÜBER UNS</a>
-  <a href="../Vorteile/vorteile.html">VORTEILE</a>
-  <a href="../Leistungen/leistungen.html">LEISTUNGEN</a>
-  <a href="../Kontakt/kontakt.html">KONTAKT</a>
-  <a href="../Impressum/impressum.html">IMPRESSUM</a>
-</nav>
-
+  <nav class="menu">
+    <a href="../index.html">STARTSEITE</a>
+    <a href="../Über%20Uns/ueber-uns.html">ÜBER UNS</a>
+    <a href="../Vorteile/vorteile.html">VORTEILE</a>
+    <a href="../Leistungen/leistungen.html">LEISTUNGEN</a>
+    <a href="../Kontakt/kontakt.html">KONTAKT</a>
+    <a href="../Impressum/impressum.html">IMPRESSUM</a>
+  </nav>
 
   <div class="content-wrapper">
     <h1>Dürfen wir uns vorstellen – INTEGRA</h1>
@@ -177,8 +188,3 @@
 
 </body>
 </html>
-
-
-
-
-
