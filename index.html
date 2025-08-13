@@ -14,64 +14,46 @@
     }
 
     .notruf-banner {
-      position: fixed;
-      top: 0;
       width: 100%;
       background-color: #a1313e;
       color: white;
       padding: 10px;
       font-weight: bold;
       text-align: center;
-      z-index: 1000;
     }
 
     .menu {
-      position: static;
-      top: 50px;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.4);
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       padding: 10px 0;
-      z-index: 999;
     }
 
     .menu a {
-      position: relative;
       color: #a1313e;
       text-decoration: none;
       font-weight: bold;
       padding: 5px 10px;
+      font-size: 16px;
       transition: color 0.3s ease;
-    }
-
-    .menu a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 0%;
-      height: 2px;
-      background-color: #a1313e;
-      transition: width 0.3s ease;
     }
 
     .menu a:hover {
       color: #fff;
     }
 
-    .menu a:hover::after {
-      width: 100%;
-    }
-
     .main-wrapper {
-      height: 100vh;
+      min-height: calc(100vh - 120px); /* Platz für Banner + Menü */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 30px;
+      box-sizing: border-box;
     }
 
     .logo-img {
@@ -81,6 +63,12 @@
       opacity: 0;
       animation: fadeIn 1s ease forwards;
       animation-delay: 0.5s;
+    }
+
+    .leistungen {
+      font-size: 18px;
+      max-width: 600px;
+      color: #a1313e;
     }
 
     .leistungen p {
@@ -94,15 +82,33 @@
     .leistungen p:nth-child(4) { animation-delay: 2.4s; }
     .leistungen p:nth-child(5) { animation-delay: 2.8s; }
 
-    .leistungen {
-      font-size: 18px;
-      max-width: 600px;
-      color: #a1313e;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ✅ Mobile Optimierung */
+    @media screen and (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0;
+      }
+
+      .menu a {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .leistungen {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .main-wrapper {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -112,13 +118,13 @@
     NOTDIENST: 0177-7279327
   </div>
 
-<nav class="menu">
-  <a href="Über%20Uns/ueber-uns.html">ÜBER UNS</a>
-  <a href="Vorteile/vorteile.html">VORTEILE</a>
-  <a href="Leistungen/leistungen.html">LEISTUNGEN</a>
-  <a href="Kontakt/kontakt.html">KONTAKT</a>
-  <a href="Impressum/impressum.html">IMPRESSUM</a>
-</nav>
+  <nav class="menu">
+    <a href="Über%20Uns/ueber-uns.html">ÜBER UNS</a>
+    <a href="Vorteile/vorteile.html">VORTEILE</a>
+    <a href="Leistungen/leistungen.html">LEISTUNGEN</a>
+    <a href="Kontakt/kontakt.html">KONTAKT</a>
+    <a href="Impressum/impressum.html">IMPRESSUM</a>
+  </nav>
 
   <div class="main-wrapper">
     <img src="integra-logo.png" alt="INTEGRA Logo" class="logo-img">
@@ -134,7 +140,3 @@
 
 </body>
 </html>
-
-
-
-
