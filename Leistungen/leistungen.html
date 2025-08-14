@@ -253,8 +253,22 @@
     </div>
   </div>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const leistungen = document.querySelectorAll('.leistung');
+
+      leistungen.forEach(item => {
+        item.addEventListener('click', function () {
+          // Optional: Alle anderen schließen
+          leistungen.forEach(el => el.classList.remove('active'));
+          this.classList.toggle('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
 
