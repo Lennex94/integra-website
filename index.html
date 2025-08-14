@@ -164,8 +164,51 @@
     </div>
   </div>
 
+  <!-- Cookie Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); color: #fff; padding: 20px; font-size: 14px; z-index: 9999; text-align: left;">
+  <p style="margin-bottom: 10px;">
+    Diese Webseite verwendet Cookies.<br>
+    Wir verwenden Cookies, um die Benutzerfreundlichkeit unserer Webseite zu verbessern. Durch die weitere Nutzung unserer Webseite stimmen Sie der Verwendung von Cookies gemäß unserer Cookie-Richtlinie zu.
+    <a href="Impressum/impressum.html" style="color: #a1313e; text-decoration: underline;">Weitere Informationen</a>
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
+    <label><input type="checkbox" checked disabled> UNBEDINGT ERFORDERLICH</label>
+    <label><input type="checkbox"> PERFORMANCE</label>
+    <label><input type="checkbox"> TARGETING</label>
+    <label><input type="checkbox"> FUNKTIONALITÄT</label>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button onclick="acceptCookies()" style="background: #a1313e; color: white; border: none; padding: 8px 12px; cursor: pointer;">ALLE AKZEPTIEREN</button>
+    <button onclick="rejectCookies()" style="background: #555; color: white; border: none; padding: 8px 12px; cursor: pointer;">ALLE ABLEHNEN</button>
+    <a href="#" style="margin-left: auto; color: #fff; text-decoration: underline;"><span style="margin-right: 5px;">⚙️</span>DETAILS ANZEIGEN</a>
+  </div>
+</div>
+
+<script>
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function rejectCookies() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function() {
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    } else {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+  
 </body>
 </html>
+
 
 
 
