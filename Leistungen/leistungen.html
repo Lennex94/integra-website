@@ -101,7 +101,7 @@
     .overlay {
       position: absolute;
       inset: 0;
-      background-color: rgba(255, 255, 255, 0.3); /* leicht hell */
+      background-color: rgba(255, 255, 255, 0.3);
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -118,20 +118,35 @@
     }
 
     .overlay p {
-      display: none;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.4s ease;
       font-size: 14px;
       line-height: 1.5;
       margin: 0;
       text-align: center;
+      overflow: hidden;
     }
 
     .leistung:hover .overlay {
-      background-color: rgba(255, 255, 255, 0.75); /* heller beim Hover */
+      background-color: rgba(255, 255, 255, 0.75);
       color: #333;
     }
 
     .leistung:hover .overlay p {
-      display: block;
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+
+    .leistung.active .overlay {
+      background-color: rgba(255, 255, 255, 0.75);
+      color: #333;
+    }
+
+    .leistung.active .overlay p {
+      max-height: 200px;
+      opacity: 1;
       margin-top: 10px;
     }
 
@@ -139,40 +154,40 @@
       color: #a1313e;
     }
 
-  @media screen and (max-width: 768px) {
-    .menu {
-      position: static;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px 20px;
-      padding: 10px 15px;
-      background-color: rgba(0, 0, 0, 0.2);
-      max-width: 95%;
-      margin: 60px auto 0 auto;
-      text-align: center;
-      min-height: 100px; /* ← Platz für 2 Reihen */
+    @media screen and (max-width: 768px) {
+      .menu {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 20px;
+        padding: 10px 15px;
+        background-color: rgba(0, 0, 0, 0.2);
+        max-width: 95%;
+        margin: 60px auto 0 auto;
+        text-align: center;
+        min-height: 100px;
+      }
+
+      .menu a {
+        font-size: 13px;
+        padding: 6px 8px;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .content-wrapper {
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 13px;
+      }
     }
-  
-    .menu a {
-      font-size: 13px;
-      padding: 6px 8px;
-      text-align: center;
-      white-space: nowrap;
-    }
-  
-    .content-wrapper {
-      margin-top: 20px;
-      padding: 20px;
-    }
-  
-    h1 {
-      font-size: 20px;
-    }
-  
-    p, ul li {
-      font-size: 13px;
-    }
-  }
   </style>
 </head>
 <body>
@@ -240,6 +255,7 @@
 
 </body>
 </html>
+
 
 
 
